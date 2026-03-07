@@ -1,0 +1,65 @@
+:root{
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+    --main-color: rgb(16, 84, 135)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: rgb(16, 84, 135);
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: rgb(12, 65, 105);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    max-width: 90%;
+}
+
+.navbar a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.navbar a:hover{
+    color: aqua;
+    border-bottom: var(--border);
+    padding-bottom: 0.2rem;
+    transform: scale(1.2);
+}
+
+.logo img{
+    height: 190px;
+    width: auto;
+}
