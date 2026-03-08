@@ -10,14 +10,13 @@
     border: none;
     text-transform: capitalize;
     transition: 0.2s linear;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Roboto", sans-serif;
 }
 
 body{
     background-color: rgb(16, 84, 135);
 }
-
 /* removi a section pq era desnecessária */
 
 .header{
@@ -60,7 +59,7 @@ body{
     width: 100%;
     justify-content: end;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 .navbar a:hover{
     color: aqua;
@@ -73,4 +72,10 @@ body{
     width: 20vw;
     max-width: 150px;
     padding: 20px;
+}
+
+.banner-content{
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
