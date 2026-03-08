@@ -18,48 +18,59 @@ body{
     background-color: rgb(16, 84, 135);
 }
 
-section{
-    padding: 3rem 2rem;
-    margin: 0 auto;
-    max-width: 1200px;
-}
+/* removi a section pq era desnecessária */
 
 .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw; /* 100% da largura da viewport */
+    height: 10vh; /* 10% da altura da viewport */
+    max-height: 100px;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
+
+    /* top: 0;
+    left: 0; */
+    right: 0; 
+    z-index: 99; 
     border-bottom: var(--border);
     background-color: rgb(12, 65, 105);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
 }
 
-.header section{
+/* .header section{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     max-width: 90%;
-}
+} */
 
 .navbar a{
-    margin: 0 1rem;
-    font-size: 1.8rem;
+    font-size: clamp(8px, 2vw, 20px); 
     color: white;
     text-decoration: none !important;
     cursor: pointer;
 }
 
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
 .navbar a:hover{
     color: aqua;
     border-bottom: var(--border);
-    padding-bottom: 0.2rem;
+    /* padding-bottom: 0.2rem; */
     transform: scale(1.2);
 }
 
 .logo img{
-    height: 190px;
-    width: auto;
+    width: 20vw;
+    max-width: 150px;
+    padding: 20px;
 }
