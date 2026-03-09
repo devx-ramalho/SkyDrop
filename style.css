@@ -13,7 +13,9 @@
     font-size: 18px;
     font-family: "Roboto", sans-serif;
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     background-color: rgb(16, 84, 135);
 }
@@ -74,8 +76,18 @@ body{
     padding: 20px;
 }
 
-.banner-content{
-    align-items: center;
-    height: 100vh;
+.hero-banner{
+    width: 100vw;
+    height: 100%;
+}
+
+.hero-banner img{
     width: 100%;
 }
+/* .banner-content{
+    align-items: center;
+    height: 100%;
+    width: 100%;    
+    max-width: 100vw;
+
+} */
