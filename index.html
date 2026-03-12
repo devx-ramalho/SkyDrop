@@ -35,7 +35,7 @@
       </nav>
     </header>
     <section id="inicio" class="hero-banner">
-      <img src="./img/banner.png" alt="banner da empresa" />
+      <img src="img/banner.png" alt="banner da empresa" />
     </section>
     <section id="solucao" class="container-solucao">
       <div class="card-solucao">
@@ -104,32 +104,13 @@
           />
           <button id="btn-rastrear">Iniciar Rastreio</button>
         </div>
-        <div id="mapa-drone" class="mapa-container" style="position: relative">
-          <p id="mapa-msg">
-            Aguardando código de rastreio para conectar ao satélite...
-          </p>
-          <div
-            id="status-painel"
-            style="
-              display: none;
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              background: rgba(0, 0, 0, 0.8);
-              color: #00f2ff;
-              padding: 15px;
-              border-radius: 8px;
-              border: 1px solid #00f2ff;
-              z-index: 1000;
-              font-family: &quot;Roboto&quot;, sans-serif;
-            "
-          >
-            <div style="font-weight: bold; margin-bottom: 5px">
-              STATUS DA MISSÃO
-            </div>
-            <div id="status-texto">Iniciando decolagem...</div>
-          </div>
-        </div>
+        <div id="mapa-drone" class="mapa-container" style="position: relative;">
+    <p id="mapa-msg">Aguardando código de rastreio para conectar ao satélite...</p>
+    <div id="status-painel" style="display: none; position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #00f2ff; padding: 15px; border-radius: 8px; border: 1px solid #00f2ff; z-index: 1000; font-family: 'Roboto', sans-serif;">
+        <div style="font-weight: bold; margin-bottom: 5px;">STATUS DA MISSÃO</div>
+        <div id="status-texto">Iniciando decolagem...</div>
+    </div>
+</div>
       </div>
     </section>
     <script src="./script.js"></script>
