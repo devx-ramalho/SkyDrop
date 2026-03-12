@@ -10,7 +10,6 @@ document.getElementById('btn-rastrear').addEventListener('click', function () {
     return;
   }
 
-  // Se já tem mapa ativo, destroi antes de recriar
   if (mapInstance) {
     mapInstance.remove();
     mapInstance = null;
@@ -20,12 +19,12 @@ document.getElementById('btn-rastrear').addEventListener('click', function () {
     animacaoAtiva = null;
   }
 
-  // Limpa o container do mapa preservando o painel de status
+ 
   const mapaDiv = document.getElementById('mapa-drone');
   mapaDiv.innerHTML = "";
   mapaDiv.style.position = "relative";
 
-  // Recria o painel de status dentro do mapa
+ 
   const painelHTML = `
     <div id="status-painel" style="
       display: none;
@@ -65,15 +64,13 @@ document.getElementById('btn-rastrear').addEventListener('click', function () {
   `;
   mapaDiv.insertAdjacentHTML('beforeend', painelHTML);
 
-  // Inicializa o mapa
   mapInstance = L.map('mapa-drone').setView([-24.008, -46.412], 15);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
   }).addTo(mapInstance);
 
-  // Ícone drone SVG neon estilizado
-  var droneSVG = `
+   var droneSVG = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="60" height="60">
       <defs>
         <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
@@ -180,7 +177,7 @@ document.getElementById('btn-rastrear').addEventListener('click', function () {
 
       marker.setLatLng(pontoFim);
 
-      // Notificação bonita de entrega
+      // Notificação de entrega
       mostrarNotificacaoEntrega(codigo);
     }
   }, 200);

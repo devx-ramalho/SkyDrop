@@ -28,8 +28,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw; /* 100% da largura da viewport */
-    height: 10vh; /* 10% da altura da viewport */
+    width: 100vw; 
+    height: 10vh; 
     max-height: 100px;
     position: fixed;
 
@@ -146,7 +146,7 @@ body{
     width: 60%;
     max-width: 400px;
     height: 4px;
-    background-color: #00f2ff; /* Cor neon do drone */
+    background-color: #00f2ff; 
     margin: 0 auto 30px auto;
     border-radius: 2px;
     box-shadow: 0 0 10px #00f2ff;
@@ -158,10 +158,9 @@ body{
     color: #e0e0e0;
 }
 
-/* --- SESSÃO 3: AVALIAÇÕES (Grid) --- */
 .avaliacoes {
     padding: 80px 20px;
-    background-color: rgba(0, 0, 0, 0.15); /* Fundo um pouco mais escuro pra destacar */
+    background-color: rgba(0, 0, 0, 0.15); 
     text-align: center;
     color: white;
 }
@@ -175,7 +174,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Faz quebrar a linha no celular */
+    flex-wrap: wrap; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -186,7 +185,7 @@ body{
     padding: 30px;
     border-radius: 10px;
     width: 300px;
-    flex-grow: 1; /* Faz eles preencherem o espaço */
+    flex-grow: 1; 
     text-align: left;
     backdrop-filter: blur(5px);
 }
@@ -209,7 +208,6 @@ body{
     color: #a0aec0;
 }
 
-/* --- SESSÃO 4: RASTREIO (Login Style) --- */
 .rastreio-section {
     padding: 100px 20px;
     text-align: center;
@@ -217,7 +215,7 @@ body{
 }
 
 .rastreio-container {
-    background-color: rgb(10, 45, 75); /* Azul mais fechado */
+    background-color: rgb(10, 45, 75); 
     max-width: 800px;
     margin: 0 auto;
     padding: 40px;
@@ -258,14 +256,14 @@ body{
 }
 
 .mapa-container {
-    height: 400px; /* Altura do quadrado do mapa */
+    height: 400px; 
     background-color: #0d1b2a;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Importante para o mapa não vazar */
+    overflow: hidden; 
 }
 
 #mapa-msg {
@@ -274,5 +272,30 @@ body{
 }
 
 #codigo-rastreio {
-    text-transform: uppercase; /* O usuário vê em maiúsculo enquanto digita */
+    text-transform: uppercase; 
 }
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        min-height: 70px;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 35vw;
+        max-width: 130px;
+        padding: 10px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 3.5vw; 
+    }
+
+    .hero-banner img {
+        padding-top: 70px; 
+    }}
