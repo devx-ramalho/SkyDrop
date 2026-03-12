@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   </head>
   <body>
     <header class="header">
@@ -25,17 +30,107 @@
       <nav class="navbar">
         <a href="#inicio">Home</a>
         <a href="#sobre">Sobre Nós</a>
-        <a href="#review">Avaliações</a>
+        <a href="#avaliacoes">Avaliações</a>
         <a href="#rastreio">Rastreio</a>
       </nav>
     </header>
-    <section class="hero-banner">
-      <!-- <div class="banner-content"> -->
-        <img 
-          src="./img/banner.png"
-          alt="banner da empresa"
-        />
-      <!-- </div> -->
+    <section id="inicio" class="hero-banner">
+      <img src="./img/banner.png" alt="banner da empresa" />
+    </section>
+    <section id="solucao" class="container-solucao">
+      <div class="card-solucao">
+        <h3>Logística Zero Emissão</h3>
+        <p>
+          A SkyDrop elimina a emissão de CO2 no trecho final da entrega. Nossos
+          UAVs autônomos são livres de trânsito urbano, garantindo uma rota
+          limpa, direta e em tempo recorde. Eficiência máxima para a sua empresa
+          e para o meio ambiente.
+        </p>
+      </div>
+    </section>
+    <section id="sobre" class="sobre-nos">
+      <div class="sobre-conteudo">
+        <h2>Tecnologia que vem do céu</h2>
+        <div class="linha-neon"></div>
+        <p>
+          Nascida da necessidade de modernizar a logística urbana, a SkyDrop
+          integra software de roteamento de alta precisão e hardware autônomo.
+          Nosso ecossistema processa milhares de variáveis por segundo para
+          garantir que cada pacote chegue ao seu destino final com precisão
+          milimétrica, contornando o caos das grandes cidades e redefinindo o
+          conceito de entrega de encomendas.
+        </p>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="avaliacoes">
+      <h2>O que nossos parceiros dizem</h2>
+      <div class="grid-avaliacoes">
+        <div class="card-avalia">
+          <div class="estrelas">★★★★★</div>
+          <p>
+            "A integração com a API da SkyDrop revolucionou nosso e-commerce.
+            Entregas que demoravam dias agora são feitas em 15 minutos."
+          </p>
+          <span>- Marcos T., Diretor da TechStore</span>
+        </div>
+        <div class="card-avalia">
+          <div class="estrelas">★★★★★</div>
+          <p>
+            "Reduzimos nossa pegada de carbono a zero na logística de última
+            milha. Nossos clientes adoram receber pelos drones."
+          </p>
+          <span>- Sarah L., BioFarma</span>
+        </div>
+        <div class="card-avalia">
+          <div class="estrelas">★★★★★</div>
+          <p>
+            "Acompanhamento em tempo real impecável. Nunca mais tivemos
+            problemas com 'destinatário ausente'."
+          </p>
+          <span>- João P., Mercado Rápido</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="rastreio" class="rastreio-section">
+      <div class="rastreio-container">
+        <h2>Localize sua Encomenda</h2>
+        <div class="input-group">
+          <input
+            type="text"
+            id="codigo-rastreio"
+            placeholder="Digite o código de rastreio (Ex: SKY-892)"
+          />
+          <button id="btn-rastrear">Iniciar Rastreio</button>
+        </div>
+        <div id="mapa-drone" class="mapa-container" style="position: relative">
+          <p id="mapa-msg">
+            Aguardando código de rastreio para conectar ao satélite...
+          </p>
+          <div
+            id="status-painel"
+            style="
+              display: none;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: rgba(0, 0, 0, 0.8);
+              color: #00f2ff;
+              padding: 15px;
+              border-radius: 8px;
+              border: 1px solid #00f2ff;
+              z-index: 1000;
+              font-family: &quot;Roboto&quot;, sans-serif;
+            "
+          >
+            <div style="font-weight: bold; margin-bottom: 5px">
+              STATUS DA MISSÃO
+            </div>
+            <div id="status-texto">Iniciando decolagem...</div>
+          </div>
+        </div>
+      </div>
     </section>
     <script src="./script.js"></script>
   </body>
